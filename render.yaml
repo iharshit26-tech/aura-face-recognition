@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: aura-face-recognition-backend
+    env: docker
+    plan: free
+    region: oregon
+    branch: main

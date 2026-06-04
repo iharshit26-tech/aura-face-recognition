@@ -1,5 +1,24 @@
 [
   {
+    "timestamp": "2026-06-04 08:55:46",
+    "name": "Marcus",
+    "attributes": {
+      "age": 27,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 23.062490463256836,
+        "disgust": 0.0002152521046809852,
+        "fear": 1.3094063997268677,
+        "happy": 0.03553240746259689,
+        "sad": 18.848957061767578,
+        "surprise": 0.021601693704724312,
+        "neutral": 56.721797943115234
+      }
+    },
+    "status": "Verified"
+  },
+  {
     "timestamp": "2026-06-04 08:40:03",
     "name": "Unknown",
     "attributes": {

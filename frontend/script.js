@@ -1,5 +1,5 @@
 // Global Configuration and State
-const API_BASE = window.location.origin;
+let API_BASE = localStorage.getItem('AURA_API_URL') || window.location.origin;
 let currentMode = 'verify'; // 'verify' or 'enroll'
 let liveScanInterval = null;
 let webcamStream = null;
@@ -392,3 +392,39 @@ window.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 });
+
+// --------------------------------------------------------
+// 9. Protocol Configuration (Settings Panel)
+// --------------------------------------------------------
+function toggleSettingsModal(show) {
+    const modal = document.getElementById('settings-modal');
+    const input = document.getElementById('settings-api-url');
+    
+    if (show) {
+        const savedUrl = localStorage.getItem('AURA_API_URL');
+        input.value = savedUrl || '';
+        modal.style.display = 'flex';
+    } else {
+        modal.style.display = 'none';
+    }
+}
+
+function saveSettings() {
+    const input = document.getElementById('settings-api-url');
+    let url = input.value.trim();
+    
+    if (url) {
+        if (url.endsWith('/')) {
+            url = url.slice(0, -1);
+        }
+        localStorage.setItem('AURA_API_URL', url);
+        API_BASE = url;
+    } else {
+        localStorage.removeItem('AURA_API_URL');
+        API_BASE = window.location.origin;
+    }
+    
+    toggleSettingsModal(false);
+    speak("Protocol configuration updated.");
+    fetchHistoryLogs();
+}

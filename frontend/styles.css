@@ -1022,3 +1022,103 @@ input:checked + .slider:before {
     background: rgba(255, 0, 85, 0.08);
     border: 1px solid rgba(255, 0, 85, 0.15);
 }
+
+/* ---------------------------------------------------- */
+/* Settings Icon & Modal Overlay */
+/* ---------------------------------------------------- */
+.settings-trigger {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.01);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.settings-trigger svg {
+    transition: transform 0.5s ease;
+}
+
+.settings-trigger:hover {
+    color: var(--primary);
+    border-color: rgba(0, 242, 254, 0.3);
+    box-shadow: 0 0 10px var(--primary-glow);
+    background: rgba(0, 242, 254, 0.04);
+}
+
+.settings-trigger:hover svg {
+    transform: rotate(45deg);
+}
+
+.settings-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(2, 4, 10, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings-modal-card {
+    width: 440px;
+    background: rgba(10, 16, 32, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--glass-border-accent);
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 20px var(--accent-glow);
+    overflow: hidden;
+    animation: slideDownModal 0.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@keyframes slideDownModal {
+    from { opacity: 0; transform: translateY(-30px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.settings-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: rgba(112, 0, 255, 0.06);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.settings-modal-header h3 {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-bright);
+}
+
+.settings-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.settings-close-btn:hover {
+    color: var(--danger);
+    text-shadow: 0 0 5px var(--danger-glow);
+}
+
+.settings-modal-body {
+    padding: 24px;
+}
+
