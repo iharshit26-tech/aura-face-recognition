@@ -24,10 +24,11 @@ RUN pip install --no-cache-dir --upgrade pip \
 # Pre-cache DeepFace neural network weights during build
 # This avoids downloading weights (~1GB total) at runtime, preventing API timeouts
 RUN python3 -c "from deepface import DeepFace; \
+from deepface.modules import modeling; \
 DeepFace.build_model('VGG-Face'); \
-DeepFace.build_model('Age'); \
-DeepFace.build_model('Gender'); \
-DeepFace.build_model('Emotion')"
+modeling.build_model(task='facial_attribute', model_name='Age'); \
+modeling.build_model(task='facial_attribute', model_name='Gender'); \
+modeling.build_model(task='facial_attribute', model_name='Emotion')"
 
 # Copy application source code
 COPY backend /app/backend
