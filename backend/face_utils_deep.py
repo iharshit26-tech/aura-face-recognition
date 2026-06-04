@@ -1,7 +1,19 @@
 import os
 import shutil
 import uuid
+import gc
 from deepface import DeepFace
+
+def clear_tf_session():
+    """
+    Clears Keras session and garbage collects to free memory on small instances.
+    """
+    try:
+        import tensorflow as tf
+        tf.keras.backend.clear_session()
+    except Exception:
+        pass
+    gc.collect()
 
 DB_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "registered_faces")
 os.makedirs(DB_DIR, exist_ok=True)
@@ -43,10 +55,12 @@ def register_face_deep(name: str, image_bytes: bytes) -> str:
         # Cleanup invalid photo
         if os.path.exists(dest_path):
             os.remove(dest_path)
+        clear_tf_session()
         raise ValueError(f"Face verification failed: No face detected. Please try again.")
 
     # Clear cache so next recognition pass includes this face
     clear_representations_cache()
+    clear_tf_session()
     return dest_path
 
 def recognize_face_deep(image_path: str):
@@ -69,9 +83,11 @@ def recognize_face_deep(image_path: str):
             match_path = results[0].iloc[0]['identity']
             rel_path = os.path.relpath(match_path, DB_DIR)
             name = rel_path.split(os.sep)[0]
+            clear_tf_session()
             return name
     except Exception as e:
         print(f"Error in face recognition: {e}")
+    clear_tf_session()
     return None
 
 def analyze_face_deep(image_path: str) -> dict:
@@ -87,14 +103,17 @@ def analyze_face_deep(image_path: str) -> dict:
         )
         if objs:
             obj = objs[0] if isinstance(objs, list) else objs
-            return {
+            res = {
                 "age": int(obj.get("age", 0)),
                 "gender": str(obj.get("dominant_gender", "Unknown")),
                 "emotion": str(obj.get("dominant_emotion", "Unknown")),
                 "emotions": {k: float(v) for k, v in obj.get("emotion", {}).items()}
             }
+            clear_tf_session()
+            return res
     except Exception as e:
         print(f"Error in face analysis: {e}")
+    clear_tf_session()
     return {
         "age": 0,
         "gender": "Unknown",
