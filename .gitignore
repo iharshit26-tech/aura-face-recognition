@@ -1,0 +1,19 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# DeepFace representations cache
+backend/registered_faces/*.pkl
+
+# Temp folders
+backend/temp/
+
+# OS specific files
+.DS_Store
+Thumbs.db

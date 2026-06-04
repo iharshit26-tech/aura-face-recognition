@@ -1,0 +1,572 @@
+[
+  {
+    "timestamp": "2026-06-04 08:40:03",
+    "name": "Unknown",
+    "attributes": {
+      "age": 28,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 0.024527890607714653,
+        "disgust": 6.15619916155552e-11,
+        "fear": 0.5934433937072754,
+        "happy": 0.0014714052667841315,
+        "sad": 5.4116291999816895,
+        "surprise": 7.237483805511147e-05,
+        "neutral": 93.96885681152344
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:39:35",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 32,
+      "gender": "Man",
+      "emotion": "happy",
+      "emotions": {
+        "angry": 0.42106980085372925,
+        "disgust": 3.817308970610611e-05,
+        "fear": 0.2915596067905426,
+        "happy": 98.83357238769531,
+        "sad": 0.2197439968585968,
+        "surprise": 1.3062436892141704e-06,
+        "neutral": 0.23401668667793274
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:39:22",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 26,
+      "gender": "Man",
+      "emotion": "fear",
+      "emotions": {
+        "angry": 6.0080389976501465,
+        "disgust": 0.018471132963895798,
+        "fear": 52.12117385864258,
+        "happy": 1.4176609516143799,
+        "sad": 37.91866683959961,
+        "surprise": 0.10766371339559555,
+        "neutral": 2.4083163738250732
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:39:13",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 32,
+      "gender": "Man",
+      "emotion": "sad",
+      "emotions": {
+        "angry": 9.777481079101562,
+        "disgust": 2.965126077469904e-05,
+        "fear": 20.697071075439453,
+        "happy": 0.005056299269199371,
+        "sad": 43.35631561279297,
+        "surprise": 0.00022173853358253837,
+        "neutral": 26.163827896118164
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:38:23",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 30,
+      "gender": "Man",
+      "emotion": "sad",
+      "emotions": {
+        "angry": 1.5695390701293945,
+        "disgust": 7.640322792212828e-07,
+        "fear": 10.679134368896484,
+        "happy": 0.00045902447891421616,
+        "sad": 79.0551528930664,
+        "surprise": 2.202623727498576e-05,
+        "neutral": 8.695687294006348
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:38:03",
+    "name": "Unknown",
+    "attributes": {
+      "age": 45,
+      "gender": "Man",
+      "emotion": "angry",
+      "emotions": {
+        "angry": 81.5533676147461,
+        "disgust": 0.001864180201664567,
+        "fear": 0.06494022160768509,
+        "happy": 2.1491997241973877,
+        "sad": 3.1513419151306152,
+        "surprise": 2.9778289794921875,
+        "neutral": 10.101451873779297
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:37:53",
+    "name": "Unknown",
+    "attributes": {
+      "age": 45,
+      "gender": "Man",
+      "emotion": "angry",
+      "emotions": {
+        "angry": 81.5533676147461,
+        "disgust": 0.001864180201664567,
+        "fear": 0.06494022160768509,
+        "happy": 2.1491997241973877,
+        "sad": 3.1513419151306152,
+        "surprise": 2.9778289794921875,
+        "neutral": 10.101451873779297
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:37:43",
+    "name": "Unknown",
+    "attributes": {
+      "age": 45,
+      "gender": "Man",
+      "emotion": "angry",
+      "emotions": {
+        "angry": 81.5533676147461,
+        "disgust": 0.001864180201664567,
+        "fear": 0.06494022160768509,
+        "happy": 2.1491997241973877,
+        "sad": 3.1513419151306152,
+        "surprise": 2.9778289794921875,
+        "neutral": 10.101451873779297
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:37:18",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 29,
+      "gender": "Man",
+      "emotion": "happy",
+      "emotions": {
+        "angry": 7.085734844207764,
+        "disgust": 5.7387322158319876e-05,
+        "fear": 5.384406089782715,
+        "happy": 84.11099243164062,
+        "sad": 0.026335956528782845,
+        "surprise": 1.3454883098602295,
+        "neutral": 2.046988010406494
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:37:08",
+    "name": "Unknown",
+    "attributes": {
+      "age": 37,
+      "gender": "Man",
+      "emotion": "sad",
+      "emotions": {
+        "angry": 2.999782768107334e-13,
+        "disgust": 3.1837960706785956e-24,
+        "fear": 2.3326070731854998e-05,
+        "happy": 1.1770169976443867e-06,
+        "sad": 95.6530532836914,
+        "surprise": 2.158796145847838e-17,
+        "neutral": 4.346920490264893
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:58",
+    "name": "Unknown",
+    "attributes": {
+      "age": 33,
+      "gender": "Man",
+      "emotion": "angry",
+      "emotions": {
+        "angry": 95.26660919189453,
+        "disgust": 6.928597251487645e-09,
+        "fear": 4.641241550445557,
+        "happy": 1.1362672012182884e-05,
+        "sad": 0.09214083850383759,
+        "surprise": 5.031914555170269e-13,
+        "neutral": 5.569004812855383e-09
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:57",
+    "name": "Unknown",
+    "attributes": {
+      "age": 31,
+      "gender": "Woman",
+      "emotion": "fear",
+      "emotions": {
+        "angry": 0.8642114400863647,
+        "disgust": 2.007128898640076e-07,
+        "fear": 41.032684326171875,
+        "happy": 1.395327091217041,
+        "sad": 37.288631439208984,
+        "surprise": 1.1732269200592782e-07,
+        "neutral": 19.419139862060547
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:48",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 23,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 11.913422584533691,
+        "disgust": 8.95153277724603e-07,
+        "fear": 0.10860345512628555,
+        "happy": 0.009841656312346458,
+        "sad": 9.876965522766113,
+        "surprise": 0.0006382226129062474,
+        "neutral": 78.09053039550781
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:41",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 26,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 0.0881175547838211,
+        "disgust": 0.00012227856495883316,
+        "fear": 0.0746341347694397,
+        "happy": 0.054126955568790436,
+        "sad": 5.1174516677856445,
+        "surprise": 0.017886748537421227,
+        "neutral": 94.64766693115234
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:38",
+    "name": "Unknown",
+    "attributes": {
+      "age": 28,
+      "gender": "Man",
+      "emotion": "happy",
+      "emotions": {
+        "angry": 3.903877817800633e-13,
+        "disgust": 3.1201082059109186e-22,
+        "fear": 1.1330364806309118e-15,
+        "happy": 99.99976348876953,
+        "sad": 7.530385343068602e-11,
+        "surprise": 8.478849133214394e-13,
+        "neutral": 0.00024120390298776329
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:28",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 26,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 0.0005588281783275306,
+        "disgust": 4.5179522345506484e-09,
+        "fear": 0.00010131559247383848,
+        "happy": 0.07016411423683167,
+        "sad": 0.20014485716819763,
+        "surprise": 0.0006279383087530732,
+        "neutral": 99.72840881347656
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:18",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 30,
+      "gender": "Man",
+      "emotion": "sad",
+      "emotions": {
+        "angry": 0.062282267957925797,
+        "disgust": 1.1447415459997501e-08,
+        "fear": 1.9864826202392578,
+        "happy": 3.6305868889030535e-07,
+        "sad": 97.60460662841797,
+        "surprise": 6.998249318712624e-06,
+        "neutral": 0.34662771224975586
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:08",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 28,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 3.3942997455596924,
+        "disgust": 6.468916374791078e-11,
+        "fear": 0.008909094147384167,
+        "happy": 1.287929194404569e-06,
+        "sad": 13.174607276916504,
+        "surprise": 7.805199153665399e-09,
+        "neutral": 83.42218017578125
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:36:00",
+    "name": "Ayush Mishra",
+    "attributes": {
+      "age": 28,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 0.015435156412422657,
+        "disgust": 2.7142448288941523e-08,
+        "fear": 0.035487979650497437,
+        "happy": 0.007729477249085903,
+        "sad": 0.176706925034523,
+        "surprise": 3.231677692383528e-05,
+        "neutral": 99.76461029052734
+      }
+    },
+    "status": "Verified"
+  },
+  {
+    "timestamp": "2026-06-04 08:35:31",
+    "name": "Unknown",
+    "attributes": {
+      "age": 27,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 0.0002235484280390665,
+        "disgust": 1.773797081439099e-11,
+        "fear": 0.004252960905432701,
+        "happy": 1.1156838581882766e-06,
+        "sad": 0.01712743751704693,
+        "surprise": 2.079463911286439e-06,
+        "neutral": 99.9783935546875
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:35:22",
+    "name": "Unknown",
+    "attributes": {
+      "age": 28,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 3.22852902172599e-05,
+        "disgust": 6.212773893433943e-13,
+        "fear": 4.231971615809016e-05,
+        "happy": 7.553502200607909e-06,
+        "sad": 0.000596128695178777,
+        "surprise": 1.4840295989415608e-05,
+        "neutral": 99.99930572509766
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:35:12",
+    "name": "Unknown",
+    "attributes": {
+      "age": 29,
+      "gender": "Man",
+      "emotion": "fear",
+      "emotions": {
+        "angry": 0.5038589835166931,
+        "disgust": 1.6910121303226333e-07,
+        "fear": 77.05517578125,
+        "happy": 3.8415309973061085e-06,
+        "sad": 22.379310607910156,
+        "surprise": 0.00045249410322867334,
+        "neutral": 0.06119151785969734
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:35:02",
+    "name": "Unknown",
+    "attributes": {
+      "age": 25,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 0.0002657721925061196,
+        "disgust": 8.85406995659345e-14,
+        "fear": 0.00029787421226501465,
+        "happy": 9.582024358678609e-05,
+        "sad": 0.05882737413048744,
+        "surprise": 2.7308351491228677e-07,
+        "neutral": 99.94051361083984
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:34:51",
+    "name": "Unknown",
+    "attributes": {
+      "age": 26,
+      "gender": "Man",
+      "emotion": "happy",
+      "emotions": {
+        "angry": 0.17317989468574524,
+        "disgust": 0.0006265207193791866,
+        "fear": 0.14063537120819092,
+        "happy": 66.26399993896484,
+        "sad": 1.4321521520614624,
+        "surprise": 1.4235584735870361,
+        "neutral": 30.565853118896484
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:34:42",
+    "name": "Unknown",
+    "attributes": {
+      "age": 27,
+      "gender": "Man",
+      "emotion": "fear",
+      "emotions": {
+        "angry": 0.7322434186935425,
+        "disgust": 0.002262264955788851,
+        "fear": 55.32318115234375,
+        "happy": 0.010692712850868702,
+        "sad": 40.74008560180664,
+        "surprise": 0.005772660952061415,
+        "neutral": 3.185760021209717
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:33:51",
+    "name": "Unknown",
+    "attributes": {
+      "age": 25,
+      "gender": "Man",
+      "emotion": "angry",
+      "emotions": {
+        "angry": 53.96516036987305,
+        "disgust": 0.00019878330931533128,
+        "fear": 2.7647745609283447,
+        "happy": 0.01736082322895527,
+        "sad": 11.00412368774414,
+        "surprise": 0.0001688505435595289,
+        "neutral": 32.24821853637695
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:33:42",
+    "name": "Unknown",
+    "attributes": {
+      "age": 25,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 18.26955795288086,
+        "disgust": 5.922206582908984e-06,
+        "fear": 2.323521852493286,
+        "happy": 2.2412736143451184e-05,
+        "sad": 12.737738609313965,
+        "surprise": 1.0886570635193493e-05,
+        "neutral": 66.66914367675781
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:33:32",
+    "name": "Unknown",
+    "attributes": {
+      "age": 28,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 14.462932586669922,
+        "disgust": 4.312814283480293e-08,
+        "fear": 0.13954803347587585,
+        "happy": 1.0609147693685372e-06,
+        "sad": 4.717836856842041,
+        "surprise": 1.2332715471075062e-07,
+        "neutral": 80.6796875
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:33:26",
+    "name": "Unknown",
+    "attributes": {
+      "age": 29,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 20.2148380279541,
+        "disgust": 4.637386609829264e-06,
+        "fear": 0.5894134640693665,
+        "happy": 4.01454271923285e-05,
+        "sad": 12.435047149658203,
+        "surprise": 9.494161531620193e-06,
+        "neutral": 66.76065063476562
+      }
+    },
+    "status": "Unknown"
+  },
+  {
+    "timestamp": "2026-06-04 08:30:29",
+    "name": "Marcus",
+    "attributes": {
+      "age": 27,
+      "gender": "Man",
+      "emotion": "neutral",
+      "emotions": {
+        "angry": 23.062490463256836,
+        "disgust": 0.0002152521046809852,
+        "fear": 1.3094063997268677,
+        "happy": 0.03553240746259689,
+        "sad": 18.848957061767578,
+        "surprise": 0.021601693704724312,
+        "neutral": 56.721797943115234
+      }
+    },
+    "status": "Verified"
+  }
+]

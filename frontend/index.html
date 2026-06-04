@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA // Neural Identity Protocol</title>
+    <!-- Google Fonts for futuristic cyberpunk aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script defer src="/static/script.js"></script>
+</head>
+<body>
+    <!-- Cyberpunk background grid and ambient lighting -->
+    <div class="grid-overlay"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="app-header">
+            <div class="logo-area">
+                <span class="pulse-dot"></span>
+                <h1>AURA <span class="cyan-text">//</span> NEURAL IDENTITY PROTOCOL</h1>
+            </div>
+            <div class="system-status">
+                <div class="status-indicator">
+                    <span class="status-label">SYS_SECURE:</span>
+                    <span class="status-val secure">ACTIVE</span>
+                </div>
+                <div class="system-time" id="clock">00:00:00</div>
+            </div>
+        </header>
+
+        <!-- Main Workspace -->
+        <main class="main-layout">
+            
+            <!-- Left Panel: Biometric Scanner & Controls -->
+            <section class="panel scanner-panel">
+                <div class="panel-header">
+                    <h2>BIOMETRIC SCANNING INTERFACE</h2>
+                    <span class="terminal-tag">SCANNER_01</span>
+                </div>
+                
+                <div class="panel-content">
+                    <!-- Circular Scanner HUD -->
+                    <div class="scanner-container">
+                        <div class="scanner-hud-ring outer-ring"></div>
+                        <div class="scanner-hud-ring middle-ring"></div>
+                        <div class="scanner-hud-ring inner-ring"></div>
+                        <div class="scanner-screen">
+                            <video id="webcam" autoplay playsinline muted></video>
+                            <canvas id="capture-canvas" style="display: none;"></canvas>
+                            <!-- Animated HUD Elements -->
+                            <div class="scanline"></div>
+                            <div class="corner-brackets bracket-tl"></div>
+                            <div class="corner-brackets bracket-tr"></div>
+                            <div class="corner-brackets bracket-bl"></div>
+                            <div class="corner-brackets bracket-br"></div>
+                            <div class="face-target" id="face-reticle"></div>
+                        </div>
+                    </div>
+
+                    <!-- Glowing Status Panel -->
+                    <div class="scanner-status-panel" id="scanner-status">
+                        <div class="status-code" id="status-code">AURA_READY</div>
+                        <div class="status-message" id="status-message">SYSTEM STANDBY - READY TO ACQUIRE LINK</div>
+                    </div>
+
+                    <!-- Mode Selectors and Control Area -->
+                    <div class="controls-area">
+                        <div class="mode-tabs">
+                            <button class="mode-tab active" id="tab-verify" onclick="setMode('verify')">VERIFY IDENTITY</button>
+                            <button class="mode-tab" id="tab-enroll" onclick="setMode('enroll')">ENROLL SUBJECT</button>
+                        </div>
+
+                        <!-- Verify Mode Panel -->
+                        <div class="mode-panel active" id="panel-verify">
+                            <div class="live-scanning-toggle">
+                                <span class="toggle-label">CONTINUOUS MONITORING</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="live-scan-checkbox" onchange="toggleLiveScan(this)">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <button class="btn btn-primary" id="btn-scan" onclick="triggerVerification()">
+                                <span class="btn-glow"></span>
+                                <span class="btn-text">EXECUTE BIOMETRIC SCAN</span>
+                            </button>
+                        </div>
+
+                        <!-- Enroll Mode Panel -->
+                        <div class="mode-panel" id="panel-enroll">
+                            <div class="enroll-form">
+                                <div class="input-group">
+                                    <label for="enroll-name">SUBJECT IDENTIFIER / NAME</label>
+                                    <input type="text" id="enroll-name" placeholder="e.g. JOHN DOE" autocomplete="off">
+                                </div>
+                                <button class="btn btn-accent" id="btn-enroll" onclick="triggerEnrollment()">
+                                    <span class="btn-glow"></span>
+                                    <span class="btn-text">INITIALIZE ENROLLMENT</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Center Panel: Demographic Attribute Analysis -->
+            <section class="panel analysis-panel">
+                <div class="panel-header">
+                    <h2>DEMOGRAPHIC PROFILE ANALYSIS</h2>
+                    <span class="terminal-tag">DEC_MODEL_V2</span>
+                </div>
+                <div class="panel-content" id="analysis-content">
+                    <div class="subject-overview">
+                        <div class="identity-card">
+                            <div class="meta-label">IDENTIFIED SUBJECT</div>
+                            <div class="subject-name" id="profile-name">UNIDENTIFIED</div>
+                            <div class="subject-meta">
+                                <span>STATUS: <span id="profile-status" class="status-tag unknown">UNKNOWN</span></span>
+                                <span id="profile-time">TIMESTAMP: N/A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="attributes-grid">
+                        <!-- Age Card -->
+                        <div class="metric-card age-card">
+                            <div class="metric-title">ESTIMATED AGE</div>
+                            <div class="age-value-container">
+                                <div class="radial-bg"></div>
+                                <span class="age-value" id="profile-age">--</span>
+                            </div>
+                            <div class="metric-desc">Apparent Age Analysis</div>
+                        </div>
+
+                        <!-- Gender Card -->
+                        <div class="metric-card gender-card">
+                            <div class="metric-title">GENDER CLASSIFICATION</div>
+                            <div class="gender-value" id="profile-gender">UNKNOWN</div>
+                            <div class="gender-meter-container">
+                                <div class="gender-meter-bar" id="gender-confidence" style="width: 0%"></div>
+                            </div>
+                            <div class="metric-desc">Biometric Feature Mapping</div>
+                        </div>
+                    </div>
+
+                    <!-- Emotion Meter -->
+                    <div class="emotion-section">
+                        <h3>EMOTION STATE ANALYSIS</h3>
+                        <div class="emotion-bars">
+                            <div class="emotion-bar-row">
+                                <span class="emotion-name">NEUTRAL</span>
+                                <div class="bar-container">
+                                    <div class="fill-bar neutral-bar" id="em-neutral" style="width: 0%"></div>
+                                </div>
+                                <span class="emotion-percent" id="em-neutral-pct">0%</span>
+                            </div>
+                            <div class="emotion-bar-row">
+                                <span class="emotion-name">HAPPY</span>
+                                <div class="bar-container">
+                                    <div class="fill-bar happy-bar" id="em-happy" style="width: 0%"></div>
+                                </div>
+                                <span class="emotion-percent" id="em-happy-pct">0%</span>
+                            </div>
+                            <div class="emotion-bar-row">
+                                <span class="emotion-name">SAD</span>
+                                <div class="bar-container">
+                                    <div class="fill-bar sad-bar" id="em-sad" style="width: 0%"></div>
+                                </div>
+                                <span class="emotion-percent" id="em-sad-pct">0%</span>
+                            </div>
+                            <div class="emotion-bar-row">
+                                <span class="emotion-name">ANGRY</span>
+                                <div class="bar-container">
+                                    <div class="fill-bar angry-bar" id="em-angry" style="width: 0%"></div>
+                                </div>
+                                <span class="emotion-percent" id="em-angry-pct">0%</span>
+                            </div>
+                            <div class="emotion-bar-row">
+                                <span class="emotion-name">FEAR</span>
+                                <div class="bar-container">
+                                    <div class="fill-bar fear-bar" id="em-fear" style="width: 0%"></div>
+                                </div>
+                                <span class="emotion-percent" id="em-fear-pct">0%</span>
+                            </div>
+                            <div class="emotion-bar-row">
+                                <span class="emotion-name">SURPRISE</span>
+                                <div class="bar-container">
+                                    <div class="fill-bar surprise-bar" id="em-surprise" style="width: 0%"></div>
+                                </div>
+                                <span class="emotion-percent" id="em-surprise-pct">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Biometric Audit Trail -->
+            <section class="panel logs-panel">
+                <div class="panel-header">
+                    <h2>BIOMETRIC AUDIT TRAIL</h2>
+                    <span class="terminal-tag">LOG_SQL_DB</span>
+                </div>
+                <div class="panel-content">
+                    <div class="logs-container" id="logs-list">
+                        <!-- Logs dynamically populated -->
+                        <div class="empty-logs">NO SCAN EVENT DATA RECORDED</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
